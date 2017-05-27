@@ -1,0 +1,566 @@
+html
+{
+    background: #eee;
+}
+
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    background: #fff;
+    line-height: 1.15;
+}
+
+nav
+{
+    flex: 0 0 100%;
+    background: #444;
+}
+
+nav ul
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a
+{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.site-map li
+{
+    flex: 0 0 8.33%;
+    padding: 3px 0;
+    text-align: center;
+}
+
+.site-map a:hover
+{
+    transition: color .15s linear;
+    color: #f00;
+}
+
+.hot-topics
+{
+    background: #ff5200;
+}
+
+.hot-topics li
+{
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.hot-topics li:first-child
+{
+    background: #23ace3;
+}
+
+.hot-topics a:hover
+{
+    color: #444;
+}
+
+header
+{
+    display: flex;
+    flex: 0 0 100%;
+    margin-top: 4px;
+    padding-right: 8px;
+}
+
+header > div
+{
+    padding: 0 5px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+header > div:not(:last-child):after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 95%;
+    border-right: 1px solid #bbb;
+}
+
+.logo
+{
+    flex: 0 0 15%;
+}
+
+.logo img
+{
+    width: 100%;
+}
+
+.date
+{
+    flex: 0 0 10%;
+    white-space: pre-line;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.weather
+{
+    display: flex;
+    flex: 0 0 11.7%;
+}
+
+.weather__tomorrow,
+.weather__today
+{
+    white-space: pre-line;
+    text-align: center;
+    flex: 0 0 50%;
+}
+
+.weather__day
+{
+    text-decoration: underline;
+}
+
+.weather__temperature
+{
+    font-weight: bold;
+}
+
+.weather__image
+{
+    font-size: 2em;
+}
+
+.social-networks
+{
+    flex: 0 0 17.2%;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.places
+{
+    font-size: 1.5em;
+}
+
+.roads
+{
+    flex: 0 0 8.2%;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.roads__header
+{
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.roads__level
+{
+    height: 22px;
+    width: 24px;
+    margin: 5px auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    background: url('traffic.png');
+}
+
+.currencies
+{
+    flex: 0 0 16.7%;
+    display: flex;
+    font-size: .8em;
+    padding-top: 10px;
+}
+
+.currencies__central-bank
+{
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.currencies__average
+{
+    flex: 0 0 60%;
+    text-align: center;
+}
+
+.currencies__header
+{
+    text-decoration: underline;
+}
+
+.currencies__average table
+{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.currencies__central-bank table
+{
+    margin: 1.6em auto;
+}
+
+.currencies__currency
+{
+    color: #369;
+    font-weight: bold;
+}
+
+.currencies__rate
+{
+    font-weight: bold;
+}
+
+.forms
+{
+    flex: 0 0 21.2%;
+    font-size: .9em;
+    padding-top: 12px;
+}
+
+.forms__search,
+.forms__mail
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.forms__mail
+{
+    margin-top: 5px;
+}
+
+.forms__search span,
+.forms__mail span
+{
+    flex: 0 0 14%;
+    padding-right: 4px;
+    box-sizing: border-box;
+}
+
+.forms input[type='text']
+{
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.forms__search .forms__input
+{
+    flex: 0 0 76%;
+}
+
+.forms__mail .forms__input
+{
+    flex: 0 0 38%;
+}
+
+.forms input[type='submit']
+{
+    padding: 0;
+    background: #ff5200;
+    border: none;
+    flex: 0 0 20px;
+    margin-left: 3px;
+    height: 20px;
+}
+
+main
+{
+    display: flex;
+    flex: 0 0 80%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 40px 8px 0;
+}
+
+.column
+{
+    display: flex;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    box-sizing: border-box;
+}
+
+.column:not(:first-child)
+{
+    padding-left: 8px;
+}
+
+.top-line
+{
+    flex: 0 0 100%;
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.top-line:hover
+{
+    border: 1px solid #ff5200;
+}
+
+.top-line img
+{
+    width: 100%;
+}
+
+.top-line__header
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, .7);
+    border-left: 4px solid #ff5200;
+    color: #fff;
+}
+
+.top-line__header h2
+{
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.top-line__header q
+{
+    display: block;
+    font-weight: initial;
+}
+
+.news-block
+{
+    flex: 0 0 100%;
+    align-self: flex-start;
+    padding-bottom: 10px;
+}
+
+.news-block__header,
+.photo-of-day__header,
+.video-of-day__header
+{
+    background: #ddd;
+    padding: 2px 4px;
+    border-left: 4px solid #ff5200;
+    border-top: 2px solid #555;
+}
+
+.news-block__header h2,
+.photo-of-day__header h2,
+.video-of-day__header h2
+{
+    font-size: inherit;
+    margin: 0;
+    padding-right: 4px;
+    border-right: 1px solid #999;
+    display: inline;
+}
+
+.news-block__header a,
+.photo-of-day__header a,
+.video-of-day__header a
+{
+    float: right;
+}
+
+.news-block__article
+{
+    padding: 10px 0 0 4px;
+}
+
+.news-block__article:after
+{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.news-block__article img
+{
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.news-block__article h3
+{
+    font-size: 1.2em;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.news-block_width_half
+{
+    flex: 0 0 49%;
+}
+
+.photo-of-day__date,
+.video-of-day__date
+{
+    color: #777;
+    margin-top: 5px;
+}
+
+.photo-of-day h3,
+.video-of-day h3
+{
+    margin: 0 0 14px;
+    font-size: 1.3em;
+}
+
+.photo-of-day img
+{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.video-of-day iframe
+{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.entertainment
+{
+    flex: 0 0 100%;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.photo-of-day
+{
+    flex: 0 0 50%;
+}
+
+.video-of-day
+{
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 0 0 50%;
+}
+
+aside
+{
+    flex: 0 0 20%;
+    padding: 40px 8px 0 0;
+    box-sizing: border-box;
+}
+
+footer
+{
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #e1e1e1;
+}
+
+.footer__client-info
+{
+    flex: 0 0 50%;
+}
+
+.footer__other
+{
+    flex: 0 0 50%;
+}
+
+.footer__bottom
+{
+    flex: 0 0 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #c9c9c9;
+}
+
+.reklama-block
+{
+    border: 1px solid #eee;
+}
+
+.reklama
+{
+    width: 100%;
+    display: flex;
+    padding-bottom: 9px;
+}
+
+.reklama__image
+{
+    flex: 0 0 50%;
+}
+
+.reklama__image img
+{
+    width: 100%;
+}
+
+.reklama__text
+{
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.reklama__text div
+{
+    padding: 2px 0;
+}
+
+.reklama__name
+{
+    color: #33f;
+    font-weight: bold;
+}
+
+.reklama__category
+{
+    color: #959595;
+    margin-bottom: auto;
+}
+
+.reklama__old-price
+{
+    text-decoration: line-through;
+    color: #44f;
+}
+
+.reklama__current-price
+{
+    color: #44f;
+}
+
+.reklama__buy
+{
+    font-weight: bold;
+}

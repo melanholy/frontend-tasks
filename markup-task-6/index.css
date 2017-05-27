@@ -1,0 +1,177 @@
+body
+{
+    white-space: nowrap;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+main
+{
+    direction: rtl;
+    float: left;
+    margin: 10%;
+    font-size: 0;
+}
+
+header
+{
+    text-align: center;
+}
+
+/* overflow: hidden для бедных. настоящий применить нельзя, потому что
+   тогда карточка для крайних фруктов будет урезана */
+
+aside
+{
+    width: 10%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+article
+{
+    width: 20vw;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+    font-size: initial;
+}
+
+.description
+{
+    display: none;
+}
+
+.content
+{
+    direction: ltr;
+    white-space: normal;
+}
+
+article:not(:target) .content:hover
+{
+    position: relative;
+    width: 125%;
+    padding: 15px;
+    margin: -20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    z-index: 3;
+    background: #fff;
+}
+
+article:not(:target) .content:hover .description
+{
+    display: block;
+}
+
+article:not(:target) img
+{
+    width: 100%;
+}
+
+article:target .thumbnail
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+article:target img
+{
+    position: relative;
+    top: 10%;
+    display: block;
+    max-height: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    z-index: 4;
+}
+
+article:target ~ .shade,
+article:target ~ .cross
+{
+    display: block;
+}
+
+.shade
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+.cross
+{
+    display: none;
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    z-index: 4;
+    font-size: 40px;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+}
+
+.cross:hover
+{
+    color: #fff;
+}
+
+.slider
+{
+    display: none;
+}
+
+.slider-label:after
+{
+    margin-top: 20%;
+    top: 0;
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    max-width: 40px;
+    color: #777;
+    z-index: 2;
+}
+
+.slider:not(:checked) + label:after
+{
+    content: '▶';
+    right: 3%;
+}
+
+.slider:checked ~ .slider + label:after
+{
+    left: 3%;
+    content: '◀';
+}
+
+.slider:checked ~ article
+{
+    width: 0;
+}
+
+.slider:checked ~ .slider ~ .slider + label:after,
+.slider:checked + label:after
+{
+    display: none;
+}

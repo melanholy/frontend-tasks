@@ -1,0 +1,395 @@
+@font-face
+{
+    font-family: 'Old London';
+    /* тут и в других @font-face линтер требовал пробел после запятой,
+       а мой текстовый редактор эти пробелы любезной удалял. пришлось
+       сделать отступы так. */
+    src: local('Old London'), url('fonts/OldLondon.woff2')
+        format('woff2'), url('fonts/OldLondon.ttf')
+        format('truetype'), url('fonts/OldLondon.eot') format('embedded-opentype');
+}
+
+@font-face
+{
+    font-family: 'C&L';
+    src: local('Champagne & Limousines Bold'), url('fonts/C&LBold.woff2')
+        format('woff2'), url('fonts/C&LBold.ttf')
+        format('truetype'), url('fonts/C&LBold.eot') format('embedded-opentype');
+    font-weight: bold;
+}
+
+@font-face
+{
+    font-family: 'C&L';
+    src: local('Champagne & Limousines Bold Italic'), url('fonts/C&LBoldItalic.woff2')
+        format('woff2'), url('fonts/C&LBoldItalic.ttf')
+        format('truetype'), url('fonts/C&LBoldItalic.eot') format('embedded-opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: 'Archivo';
+    src: local('Archivo Narrow Regular'), url('fonts/ArchivoNarrow.woff2')
+        format('woff2'), url('fonts/ArchivoNarrow.ttf')
+        format('truetype'), url('fonts/ArchivoNarrow.eot') format('embedded-opentype');
+}
+
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    width: 75%;
+    margin: 0 auto;
+    line-height: 1.15;
+}
+
+h1
+{
+    margin: 0;
+    font-size: 100px;
+    font-weight: normal;
+}
+
+h2
+{
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+h3
+{
+    margin: 0;
+}
+
+.night-mode:checked ~ header,
+.night-mode:checked ~ main
+{
+    background: #000;
+    color: #fff;
+}
+
+.different-font:checked ~ header,
+.different-font:checked ~ main
+{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.large-font:checked ~ header div,
+.large-font:checked ~ main
+{
+    font-size: 1.1em;
+}
+
+.small-font:checked ~ header div,
+.small-font:checked ~ main
+{
+    font-size: .9em;
+}
+
+header
+{
+    font-size: .8em;
+}
+
+header h3
+{
+    text-align: center;
+    font-style: italic;
+    height: 30px;
+}
+
+.head div,
+.head h1
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.index,
+.sections,
+.weather
+{
+    width: 13%;
+}
+
+header h1
+{
+    font-family: 'Old London', serif;
+    width: 61%;
+    text-align: center;
+}
+
+header table
+{
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header table td:first-child
+{
+    width: 100%;
+}
+
+.info
+{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.info div
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info div
+{
+    width: 24%;
+    text-align: center;
+}
+
+.info div:first-child
+{
+    width: 14%;
+    text-align: left;
+}
+
+.info div:last-child
+{
+    width: 14%;
+    text-align: right;
+}
+
+.info div:nth-child(odd)
+{
+    font-size: 1.9em;
+}
+
+article p
+{
+    margin: 0;
+    text-indent: 8px;
+    text-align: justify;
+}
+
+article
+{
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+article:not(:last-child)
+{
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+article:not(:first-child)
+{
+    padding-left: 10px;
+}
+
+article h2,
+article h3
+{
+    font-family: 'C&L', sans-serif;
+}
+
+article p:first-child:first-letter
+{
+    font-size: 2em;
+    font-family: 'Old London', sans-serif;
+}
+
+.col-2
+{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+.col-3
+{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.author
+{
+    font-style: italic;
+}
+
+blockquote
+{
+    font-size: 2.6em;
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    font-stretch: ultra-condensed;
+}
+
+blockquote:before
+{
+    content: '';
+    width: 60%;
+    display: block;
+    margin: 5px 0 0 20%;
+    border-top: 1px solid black;
+}
+
+blockquote:after
+{
+    content: '';
+    width: 60%;
+    display: block;
+    margin: 0 0 5px 20%;
+    border-top: 1px solid black;
+}
+
+.doctor-strange,
+.donald-glover
+{
+    width: 30%;
+}
+
+.pixar-news
+{
+    width: 40%;
+}
+
+figure
+{
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 2px solid black;
+}
+
+figcaption
+{
+    font-style: italic;
+    text-align: center;
+}
+
+figure img
+{
+    width: 100%;
+}
+
+.want-to-buy
+{
+    height: 135px;
+    width: 170px;
+    margin: 5px auto;
+    border: 3px dashed black;
+    padding: 5px;
+}
+
+.want-to-buy h2
+{
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+.legend
+{
+    cursor: pointer;
+}
+
+.legend-item
+{
+    color: #ff8000;
+}
+
+.item-level
+{
+    color: #ffd100;
+}
+
+.special-effect
+{
+    color: #1eff00;
+}
+
+.gold
+{
+    color: #ffd700;
+}
+
+.silver
+{
+    color: #c0c0c0;
+}
+
+.copper
+{
+    color: #882d17;
+}
+
+.tooltip
+{
+    display: none;
+    position: relative;
+    width: 23em;
+    right: 20em;
+    cursor: auto;
+}
+
+.tooltip:hover
+{
+    display: block;
+}
+
+.tooltip td:first-child
+{
+    width: 100%;
+}
+
+.tooltip td:last-child
+{
+    white-space: nowrap;
+}
+
+.tooltip table
+{
+    border-collapse: collapse;
+}
+
+.tooltip > div
+{
+    position: absolute;
+    bottom: 100%;
+    background: #080d21;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid #777;
+}
+
+.legend:hover .tooltip
+{
+    display: block;
+}
+
+.vertical
+{
+    width: 1em;
+    word-wrap: break-word;
+    letter-spacing: 100px;
+    overflow: hidden;
+}
+
+aside
+{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border: 1px solid black;
+    padding: 3px;
+}

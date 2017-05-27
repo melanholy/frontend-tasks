@@ -1,0 +1,449 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: Verdana, sans-serif;
+    background: #eee;
+    margin: 0;
+    height: 100%;
+}
+
+.change-layout:checked ~ .container
+{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.change-layout:not(:checked) ~ .container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.container
+{
+    padding: 0 10px 0 20px;
+    min-height: 100%;
+}
+
+.change-layout:not(:checked) ~ .container aside
+{
+    flex: 0 0 20%;
+}
+
+.container aside
+{
+    background: #d4d4d4;
+    font-size: 1.2em;
+}
+
+header h1
+{
+    text-align: center;
+    margin: 0;
+    padding: 21px;
+}
+
+.change-layout:not(:checked) ~ .container .content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: auto;
+}
+
+.change-layout:checked ~ .container .content
+{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    margin-bottom: auto;
+}
+
+.breed label
+{
+    cursor: pointer;
+    display: block;
+    border-bottom: 1px solid #999;
+    padding: 16px 12px;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+.breed label:hover
+{
+    background: #bbb;
+}
+
+.content > input
+{
+    display: none;
+}
+
+.content > input:checked ~ main article
+{
+    opacity: .4;
+}
+
+.content > input:checked ~ main article .dog-info
+{
+    opacity: 0;
+}
+
+.select-pug:checked ~ main .pug,
+.select-dalmatin:checked ~ main .dalmatin,
+.select-terrier:checked ~ main .terrier,
+.select-toy-terrier:checked ~ main .toy-terrier,
+.select-pug:checked ~ main .pug:hover .dog-info,
+.select-dalmatin:checked ~ main .dalmatin:hover .dog-info,
+.select-terrier:checked ~ main .terrier:hover .dog-info,
+.select-toy-terrier:checked ~ main .toy-terrier:hover .dog-info
+{
+    opacity: 1;
+}
+
+.select-pug:checked ~ .breed label[for='select-pug'],
+.select-dalmatin:checked ~ .breed label[for='select-dalmatin'],
+.select-terrier:checked ~ .breed label[for='select-terrier'],
+.select-toy-terrier:checked ~ .breed label[for='select-toy-terrier']
+{
+    background: #555;
+    color: #fff;
+}
+
+.change-layout:not(:checked) ~ .container main
+{
+    flex: 0 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.change-layout:checked ~ .container main
+{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+main
+{
+    box-sizing: border-box;
+    padding: 0 7px;
+}
+
+main article
+{
+    position: relative;
+    overflow: hidden;
+    padding: 2px 4px;
+    box-sizing: border-box;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.change-layout:checked ~ .container main article:nth-of-type(8n+2),
+.change-layout:checked ~ .container main article:nth-of-type(8n+6)
+{
+    grid-column: span 2;
+}
+
+.change-layout:checked ~ .container main article:nth-of-type(8n+8)
+{
+    grid-column: span 3;
+}
+
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+1),
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+3),
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+4),
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+5),
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+7)
+{
+    flex: 0 0 33.3%;
+}
+
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+2),
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+6)
+{
+    flex: 0 0 66.6%;
+}
+
+.change-layout:not(:checked) ~ .container main article:nth-of-type(8n+8)
+{
+    flex: 0 0 100%;
+}
+
+article img
+{
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 100%;
+    height: 300px;
+}
+
+.dog-info
+{
+    position: absolute;
+    left: 4px;
+    bottom: 30px;
+    padding: 16px 8px;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+article:hover .dog-info
+{
+    opacity: 1;
+}
+
+.change-layout:checked ~ .container .ratings
+{
+    align-self: start;
+}
+
+.change-layout:not(:checked) ~ .container .ratings
+{
+    align-self: flex-start;
+}
+
+.ratings
+{
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.ratings h2
+{
+    font-weight: normal;
+    color: #f00;
+    margin: 0;
+}
+
+.sort-label
+{
+    font-size: .7em;
+    float: right;
+}
+
+.sort-ratings
+{
+    float: right;
+}
+
+.sort-ratings:checked ~ .ratings-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ratings-container
+{
+    clear: both;
+}
+
+.ratings-container div
+{
+    padding-top: 5px;
+    flex: 0 0 100%;
+}
+
+.rating
+{
+    height: 1.2em;
+    text-align: right;
+    font-weight: bold;
+}
+
+.rating:before
+{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.rating-10
+{
+    order: 1;
+}
+
+.rating-10 .rating:before,
+.rating-9 .rating:before,
+.rating-8 .rating:before
+{
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.rating-7 .rating:before,
+.rating-6 .rating:before,
+.rating-5 .rating:before
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
+}
+
+.rating-4 .rating:before,
+.rating-3 .rating:before,
+.rating-2 .rating:before,
+.rating-1 .rating:before
+{
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
+}
+
+.rating-10
+{
+    order: 1;
+}
+
+.rating-10 .rating:before
+{
+    width: 80%;
+}
+
+.rating-9
+{
+    order: 2;
+}
+
+.rating-9 .rating:before
+{
+    width: 72%;
+}
+
+.rating-8
+{
+    order: 3;
+}
+
+.rating-8 .rating:before
+{
+    width: 64%;
+}
+
+.rating-7
+{
+    order: 4;
+}
+
+.rating-7 .rating:before
+{
+    width: 56%;
+}
+
+.rating-6
+{
+    order: 5;
+}
+
+.rating-6 .rating:before
+{
+    width: 48%;
+}
+
+.rating-5
+{
+    order: 6;
+}
+
+.rating-5 .rating:before
+{
+    width: 40%;
+}
+
+.rating-4
+{
+    order: 7;
+}
+
+.rating-4 .rating:before
+{
+    width: 32%;
+}
+
+.rating-3
+{
+    order: 8;
+}
+
+.rating-3 .rating:before
+{
+    width: 24%;
+}
+
+.rating-2
+{
+    order: 9;
+}
+
+.rating-2 .rating:before
+{
+    width: 16%;
+}
+
+.rating-1
+{
+    order: 10;
+}
+
+.rating-1 .rating:before
+{
+    width: 8%;
+}
+
+.change-layout:checked ~ .container footer
+{
+    align-self: end;
+}
+
+footer
+{
+    padding: 16px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+footer:before
+{
+    left: 0;
+    margin-top: -16px;
+    position: absolute;
+    content: '';
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+address
+{
+    color: #44f;
+    float: right;
+    font-style: normal;
+}
+
+@media (max-width: 850px)
+{
+    .change-layout:not(:checked) ~ .container .breed,
+    .change-layout:not(:checked) ~ .container main,
+    .change-layout:not(:checked) ~ .container .ratings
+    {
+        flex: 0 0 100%;
+    }
+
+    .change-layout:checked ~ .container .breed,
+    .change-layout:checked ~ .container main,
+    .change-layout:checked ~ .container .ratings
+    {
+        grid-column: span 3;
+    }
+}

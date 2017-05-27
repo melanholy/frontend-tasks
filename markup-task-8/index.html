@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Овощи</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <input type="checkbox" class="change-layout" id="change-layout">
+    <label for="change-layout">Сменить расположение карточек</label>
+    <header>
+        <h1>Овощи</h1>
+    </header>
+    <main>
+        <input type="radio" id="select-pepper" name="select-item" checked>
+        <input type="radio" id="select-cabbage" name="select-item">
+        <input type="radio" id="select-corn" name="select-item">
+        <input type="radio" id="select-onion" name="select-item">
+        <input type="radio" id="select-cucumber" name="select-item">
+        <input type="radio" id="select-carrot" name="select-item">
+        <input type="radio" id="select-garlic" name="select-item">
+        <input type="radio" id="select-tomato" name="select-item">
+        <article id="pepper">
+            <div class="recipe">
+                <h2>Каша из перца</h2>
+                <ul>
+                    <li>Вода</li>
+                    <li>Перец</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Кидаем все в кастрюлю и ждем, пока не закипит.
+                        </li>
+                    </ol>
+                    <q>
+                        Мда
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="peppa.jpg"
+                     alt="Перец" title="Перец">
+                <a href="#pepper" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-pepper"></label>
+        </article>
+        <article id="cabbage">
+            <div class="recipe">
+                <h2>Салат из капусты</h2>
+                <ul>
+                    <li>Капуста</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Режем капусту и кидаем все на тарелку.
+                        </li>
+                    </ol>
+                    <q>
+                        Хех
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="cabbage.jpg"
+                     alt="Капуста" title="Капуста">
+                <a href="#cabbage" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-cabbage"></label>
+        </article>
+        <article id="corn">
+            <div class="recipe">
+                <h2>Попкорн</h2>
+                <ul>
+                    <li>Кукуруза</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Кидаем в микроволновку.
+                        </li>
+                    </ol>
+                    <q>
+                        Поп-поп!
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="http://www.edenbrothers.com/store/media/_GroupPages/Corn.jpg"
+                     alt="Кукуруза" title="Кукуруза">
+                <a href="#corn" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-corn"></label>
+        </article>
+        <article id="onion">
+            <div class="recipe">
+                <h2>Луковые кольца</h2>
+                <ul>
+                    <li>Лук</li>
+                    <li>Кольца</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Кидаем в духовку и ждем, пока не поджарится.
+                        </li>
+                    </ol>
+                    <q>
+                        Ммм
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="http://skarvit.ru/wp-content/uploads/2014/12/hf.jpg"
+                     alt="Лук" title="Лук">
+                <a href="#onion" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-onion"></label>
+        </article>
+        <article id="cucumber">
+            <div class="recipe">
+                <h2>Огуречный сок</h2>
+                <ul>
+                    <li>Огурец</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Кидаем в соковыжималку.
+                        </li>
+                    </ol>
+                    <q>
+                        Фууу
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="http://www.1000listnik.ru/wp-content/uploads/2016/03/56e1411715e62.jpeg"
+                     alt="Огурец" title="Огурец">
+                <a href="#cucumber" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-cucumber"></label>
+        </article>
+        <article id="carrot">
+            <div class="recipe">
+                <h2>Морковь по-корейски</h2>
+                <ul>
+                    <li>Морковь</li>
+                    <li>Перец</li>
+                    <li>Масло</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Трем морковь на терке, кидаем все в кастрюлю и мешаем.
+                        </li>
+                    </ol>
+                    <q>
+                        Остренько!
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="http://www.shapeme.com.au/blog/wp-content/uploads/2014/09/carrot.jpg"
+                     alt="Морковь" title="Морковь">
+                <a href="#carrot" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-carrot"></label>
+        </article>
+        <article id="tomato">
+            <div class="recipe">
+                <h2>Кетчуп</h2>
+                <ul>
+                    <li>Помидор</li>
+                    <li>Соль</li>
+                    <li>Перец</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            Кидаем все в миксер.
+                        </li>
+                    </ol>
+                    <q>
+                        С шашлыком вообще супер.
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="https://top5ofanything.com/uploads/2015/05/Tomatoes.jpg"
+                     alt="Томат" title="Томат">
+                <a href="#tomato" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-tomato"></label>
+        </article>
+        <article id="garlic">
+            <div class="recipe">
+                <h2>Кетчуп</h2>
+                <ul>
+                    <li>Чеснок</li>
+                    <li>Яблочный уксус</li>
+                    <li>Свекла</li>
+                    <li>Соль</li>
+                    <li>Сахар</li>
+                    <li>Уксус</li>
+                    <li>Вода</li>
+                </ul>
+                <div class="instruction">
+                    <span class="instruction-start">
+                        Инструкция
+                    </span>
+                    <ol>
+                        <li>
+                            После того, как чеснок сняли с грядки, обрезаем ему ботву, оставив пенек
+                            2-2.5 сантиметров высотой, корешки; и очищаем головки. Кидаем все в стену.
+                        </li>
+                        <li>
+                            Чеснок (его должно быть 7 кг) складываем в емкость (например в эмалированное
+                            ведро с крышкой).
+                        </li>
+                        <li>
+                            Заливаем его водой (холодной) с добавлением одного литра 9%-ого уксуса.
+                        </li>
+                        <li>
+                            Кидаем все в стену.
+                        </li>
+                    </ol>
+                    <q>
+                        Зато попытались.
+                    </q>
+                </div>
+                <a href="#" class="cross">X</a>
+            </div>
+            <div class="front">
+                <img src="http://good-tips.pro/images/health/medicine/GarlicCloves-big.jpg"
+                     alt="Чеснок" title="Чеснок">
+                <a href="#garlic" class="show-recipe">
+                    <span>Рецепт</span>
+                </a>
+            </div>
+            <label class="select-item-label" for="select-garlic"></label>
+        </article>
+        <a href="#" class="shade"></a>
+    </main>
+</body>
+</html>

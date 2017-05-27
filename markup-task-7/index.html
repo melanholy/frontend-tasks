@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Котятки</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <input type="checkbox" class="change-layout" id="change-layout">
+    <label for="change-layout">Flex -&gt; Grid</label>
+    <div class="container">
+        <header>
+            <h1>Котятки</h1>
+        </header>
+        <div class="content">
+            <input type="checkbox" id="select-pug" class="select-pug">
+            <input type="checkbox" id="select-dalmatin" class="select-dalmatin">
+            <input type="checkbox" id="select-terrier" class="select-terrier">
+            <input type="checkbox" id="select-toy-terrier" class="select-toy-terrier">
+            <aside class="breed">
+                <label for="select-dalmatin">Далматинец</label>
+                <label for="select-pug">Мопс</label>
+                <label for="select-terrier">Йоркширский терьер</label>
+                <label for="select-toy-terrier">Той терьер</label>
+            </aside>
+            <main>
+                <article class="pug">
+                    <img src="http://dog.pet2me.com/upload/cl/full/2012/06/05_4852.jpg"
+                         alt="Мопс Вася" title="Вася">
+                    <span class="dog-info">Вася, 4 годика</span>
+                </article>
+                <article class="pug">
+                    <img src="http://www.pitomec.ru/upload/admin/images/kinds/dogs/Pug4.jpg"
+                         alt="Мопс Ларрик" title="Ларрик">
+                    <span class="dog-info">Ларрик, 6 годиков</span>
+                </article>
+                <article class="dalmatin">
+                    <img src="https://i.ytimg.com/vi/6GeeSCaRIMI/maxresdefault.jpg"
+                         alt="Далматинец пёс" title="Пёс">
+                    <span class="dog-info">Пёс, 3 годика</span>
+                </article>
+                <article>
+                    <img src="dog.jpg"
+                         alt="Робот Годдарт"
+                         title="Любитель ракет и сладких конфет, мальчишка герой приключений">
+                    <span class="dog-info">Годдарт, 624 годика</span>
+                </article>
+                <article class="toy-terrier">
+                    <img src="http://kot-pes.com/wp-content/uploads/2015/03/Russkiy_toy_041-650x392.jpg"
+                         alt="Той терьер Котопес" title="Котопес">
+                    <span class="dog-info">Котопес, 1 годик</span>
+                </article>
+                <article class="terrier">
+                    <img src="img.jpg"
+                         alt="Йоркширский терьер Баскервилль" title="Баскервилль">
+                    <span class="dog-info">Баскервилль, 1 годик</span>
+                </article>
+                <article class="dalmatin">
+                    <img src="http://www.point.ru/static/galleries/0018/0018540/3830.jpg"
+                         alt="Далматинец Спотти" title="Спотти">
+                    <span class="dog-info">Спотти, 3 годика</span>
+                </article>
+                <article>
+                    <img src="http://www.fortuna-shahriyara.ru/smalldog/100215/IMG_8329.JPG"
+                         alt="8 щенков лабрадора" title="Лабрадоры">
+                    <span class="dog-info">ми ми ми</span>
+                </article>
+            </main>
+            <aside class="ratings">
+                <h2>РЕЙТИНГ</h2>
+                <input class="sort-ratings" id="sort-ratings" type="checkbox">
+                <label for="sort-ratings" class="sort-label">по убыванию</label>
+                <div class="ratings-container">
+                    <div class="rating-10">
+                        Мопс
+                        <div class="rating">10</div>
+                    </div>
+                    <div class="rating-3">
+                        Той терьер
+                        <div class="rating">3</div>
+                    </div>
+                    <div class="rating-6">
+                        Далматинец
+                        <div class="rating">6</div>
+                    </div>
+                    <div class="rating-8">
+                        Йоркширский терьер
+                        <div class="rating">8</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            &copy; ООО ОАО, 2016
+            <address>
+                Наш адрес: улица Китовая, д.4
+            </address>
+        </footer>
+    </div>
+</body>
+</html>
